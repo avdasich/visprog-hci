@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Vision Beyond.iml" filepath="$PROJECT_DIR$/Vision Beyond.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/visprog-hci.iml" filepath="$PROJECT_DIR$/.idea/visprog-hci.iml" />
     </modules>
   </component>
 </project>
