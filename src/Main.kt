@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.PI
 import kotlin.random.Random
 
-<<<<<<< HEAD
 class Human(
     var fullName: String,
     var age: Int,
@@ -14,8 +12,6 @@ class Human(
     var y: Double = 0.0
 
     fun move() {
-        // случайное направление от 0 до 2π
-=======
 open class Human(
     var fullName: String,
     var age: Int,
@@ -29,14 +25,12 @@ open class Human(
     var running = true
 
     open fun move() {
->>>>>>> inheritance
         val angle = Random.nextDouble(0.0, 2 * PI)
         x += speed * cos(angle)
         y += speed * sin(angle)
     }
 
-<<<<<<< HEAD
-=======
+
     override fun run() {
         var step = 1
         while (running) {
@@ -47,15 +41,12 @@ open class Human(
         }
     }
 
->>>>>>> inheritance
     override fun toString(): String {
         return "$fullName (возраст: $age) → координаты: (%.2f, %.2f)".format(x, y)
     }
 }
 
-<<<<<<< HEAD
 fun main() {
-    // число людей = последняя цифра номера группы → 431 → 4 человека
     val humans = arrayOf(
         Human("Иванов Иван", 20, 1.0),
         Human("Петров Петр", 21, 1.2),
@@ -63,7 +54,7 @@ fun main() {
         Human("Кузнецов Кузьма", 23, 1.5)
     )
 
-    val simulationTime = 10 // секунд (итераций)
+    val simulationTime = 10 
     println("Начало симуляции Random Walk на $simulationTime шагов:\n")
 
     for (t in 1..simulationTime) {
@@ -76,7 +67,6 @@ fun main() {
     }
 }
 
-=======
 class Driver(
     fullName: String,
     age: Int,
@@ -91,8 +81,6 @@ class Driver(
     }
 }
 
-=======
->>>>>>> Interfaces
 fun main() {
     val humans = arrayOf(
         Human("Иванов Иван", 20, 1.0),
@@ -102,36 +90,20 @@ fun main() {
     val driver = Driver("Смирнов Сергей (водитель)", 30, 2.0)
 
     val all = humans + driver
-<<<<<<< HEAD
 
-=======
->>>>>>> Interfaces
     val threads = all.map { Thread(it) }
 
     println("Начало симуляции...\n")
     threads.forEach { it.start() }
-<<<<<<< HEAD
 
     Thread.sleep(5000)
 
     all.forEach { it.running = false }
 
-=======
+
     Thread.sleep(5000)
     all.forEach { it.running = false }
->>>>>>> Interfaces
     threads.forEach { it.join() }
 
     println("\nСимуляция завершена.")
 }
-
-
-
-
-
-<<<<<<< HEAD
-
-
->>>>>>> inheritance
-=======
->>>>>>> Interfaces
