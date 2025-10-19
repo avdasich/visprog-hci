@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.PI
@@ -90,6 +91,8 @@ class Driver(
     }
 }
 
+=======
+>>>>>>> Interfaces
 fun main() {
     val humans = arrayOf(
         Human("Иванов Иван", 20, 1.0),
@@ -99,16 +102,24 @@ fun main() {
     val driver = Driver("Смирнов Сергей (водитель)", 30, 2.0)
 
     val all = humans + driver
+<<<<<<< HEAD
 
+=======
+>>>>>>> Interfaces
     val threads = all.map { Thread(it) }
 
     println("Начало симуляции...\n")
     threads.forEach { it.start() }
+<<<<<<< HEAD
 
     Thread.sleep(5000)
 
     all.forEach { it.running = false }
 
+=======
+    Thread.sleep(5000)
+    all.forEach { it.running = false }
+>>>>>>> Interfaces
     threads.forEach { it.join() }
 
     println("\nСимуляция завершена.")
@@ -118,6 +129,9 @@ fun main() {
 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> inheritance
+=======
+>>>>>>> Interfaces
