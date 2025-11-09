@@ -1,4 +1,3 @@
-//src/Movable.kt
 interface Movable {
     var x: Double
     var y: Double
