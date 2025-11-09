@@ -1,4 +1,3 @@
-//src/Human.kt
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.PI
