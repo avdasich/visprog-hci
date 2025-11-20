@@ -2,8 +2,6 @@ package com.example.visprog
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import android.graphics.Color
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,14 +12,6 @@ class MainActivity : AppCompatActivity() {
     private var operator = ""
     private var firstNumber = 0.0
     private var isNewOperation = true
-
-    fun getRandomcolor(): Int{
-        var red = Random.nextInt(256)
-        var green = Random.nextInt(256)
-        var blue = Random.nextInt(256)
-        return Color.rgb(red, green, blue)
-
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,9 +39,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        findViewById<TextView>(R.id.but_plus).setOnClickListener {
-            it.setBackgroundColor(getRandomcolor())
-            setOperation("+") }
+        findViewById<TextView>(R.id.but_plus).setOnClickListener { setOperation("+") }
         findViewById<TextView>(R.id.but_minus).setOnClickListener { setOperation("-") }
         findViewById<TextView>(R.id.but_mult).setOnClickListener { setOperation("*") }
         findViewById<TextView>(R.id.but_division).setOnClickListener { setOperation("/") }
