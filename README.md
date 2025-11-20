@@ -124,44 +124,37 @@ src/
 
 
 
-# Проект: № 2"Andoroid App Calculate"
-## Описание 
-Выполнения приметивных арифметических действий для калькулятора
+# Проект №2: Android App Calculate
 
-## Функционал 
-- Сложение 
+## Описание
+Приложение-калькулятор для выполнения базовых арифметических операций.
+
+## Функционал
+- Сложение
 - Вычитание
 - Умножение
 - Деление
 
-Схема проекта:
+## Структура проекта
+- **app/** — исходный код приложения
+  - **src/main/** — основной код приложения
+  - **src/androidTest/** — тесты для Android
+  - **src/test/** — юнит-тесты
+  - **build.gradle.kts** — скрипт сборки модуля
+- **build.gradle.kts** — корневой скрипт Gradle
+- **settings.gradle.kts** — настройки проекта
+- **gradle/** — Gradle wrapper и конфигурация
 
-.
-├── README.md
-├── app
-│   ├── build
-│   │   ├── generated
-│   │   ├── intermediates
-│   │   ├── kotlin
-│   │   ├── outputs
-│   │   └── tmp
-│   ├── build.gradle.kts
-│   ├── proguard-rules.pro
-│   └── src
-│       ├── androidTest
-│       ├── main
-│       └── test
-├── build.gradle.kts
-├── gradle
-│   ├── libs.versions.toml
-│   └── wrapper
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
-├── gradle.properties
-├── gradlew
-├── gradlew.bat
-├── local.properties
-└── settings.gradle.kts
+## Сборка и запуск
+1. Открой проект в Android Studio.
+2. Синхронизируй Gradle.
+3. Запусти приложение на эмуляторе или реальном устройстве.
+
+## Примечания
+- Проект использует Kotlin DSL для Gradle (`build.gradle.kts`).
+- В директории `app/src/main` находятся исходные файлы приложения.
+
+
 
 
 
