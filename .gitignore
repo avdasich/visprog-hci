@@ -1,1 +1,9 @@
 .DS_Store
+.gradle/
+app/build/
+build/
+*.apk
+*.aab
+.idea/
+local.properties
+
