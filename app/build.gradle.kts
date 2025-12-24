@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.visprog"
+    namespace = "com.example.myapplication"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.visprog"
+        applicationId = "com.example.myapplication"
         minSdk = 29
         targetSdk = 36
         versionCode = 1

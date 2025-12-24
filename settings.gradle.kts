@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "visprog"
+rootProject.name = "My Application"
 include(":app")
+ 
