@@ -6,11 +6,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.content.ContextCompat
+
 
 class CalculatorActivity : AppCompatActivity() {
     private var currentInput = ""
     private var operator = ""
     private var firstValue = 0.0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,8 +43,6 @@ class CalculatorActivity : AppCompatActivity() {
         val btn7: Button = findViewById(R.id.btn7)
         val btn8: Button = findViewById(R.id.btn8)
         val btn9: Button = findViewById(R.id.btn9)
-        val btnA: Button = findViewById(R.id.btnA)
-
         val btnPlus: Button = findViewById(R.id.btnPlus)
         val btnMinus: Button = findViewById(R.id.btnMinus)
         val btnMultiply: Button = findViewById(R.id.btnMultiply)
@@ -103,6 +104,7 @@ class CalculatorActivity : AppCompatActivity() {
             tvResult.text = currentInput
         }
 
+
         btnDot.setOnClickListener {
             if (!currentInput.contains(".")) {
                 currentInput += "."
@@ -152,6 +154,7 @@ class CalculatorActivity : AppCompatActivity() {
             tvResult.text = currentInput
         }
 
+
         btnEquals.setOnClickListener {
             val secondValue = currentInput.toDoubleOrNull() ?: 0.0
             val result = when(operator) {
@@ -181,5 +184,6 @@ class CalculatorActivity : AppCompatActivity() {
             tvResult.text = "0"
             tvInput.text = ""
         }
+
     }
 }
