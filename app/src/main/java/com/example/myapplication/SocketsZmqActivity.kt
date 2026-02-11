@@ -14,6 +14,7 @@ class SocketsZmqActivity : AppCompatActivity() {
     private lateinit var etServerIp: EditText
     private lateinit var btnSend: Button
     private lateinit var tvLog: TextView
+    private lateinit var btnBack: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,11 @@ class SocketsZmqActivity : AppCompatActivity() {
         etServerIp = findViewById(R.id.etServerIp)
         btnSend = findViewById(R.id.btnSend)
         tvLog = findViewById(R.id.tvLog)
+        btnBack = findViewById(R.id.btnBackToMenu)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         btnSend.setOnClickListener {
             val ip = etServerIp.text.toString().trim()
@@ -38,7 +44,7 @@ class SocketsZmqActivity : AppCompatActivity() {
                     val sock = ctx.createSocket(SocketType.REQ)
                     sock.connect(endpoint)
 
-                    val request = "Say my name..."
+                    val request = "My name is..."
                     sock.send(request.toByteArray(ZMQ.CHARSET), 0)
 
                     val replyBytes = sock.recv(0)

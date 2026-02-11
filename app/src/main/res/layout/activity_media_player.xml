@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="←"
         android:textSize="18sp"
-        android:backgroundTint="#2D2D2D"
+        android:backgroundTint="#6200EE"
         android:textColor="#FFFFFF"
         android:layout_margin="12dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Сортировать"
         android:textSize="14sp"
-        android:backgroundTint="#2D2D2D"
+        android:backgroundTint="#6200EE"
         android:textColor="#FFFFFF"
         android:layout_margin="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +81,7 @@
             android:layout_height="70dp"
             android:text="▶"
             android:textSize="28sp"
-            android:backgroundTint="#4CAF50"
+            android:backgroundTint="#6200EE"
             android:textColor="#FFFFFF"
             android:layout_margin="6dp"/>
 

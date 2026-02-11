@@ -7,6 +7,7 @@ import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -28,6 +29,7 @@ class LocationActivity : AppCompatActivity(), LocationListener {
     private lateinit var tvLon: TextView
     private lateinit var tvAlt: TextView
     private lateinit var tvTime: TextView
+    private lateinit var btnBack: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +40,11 @@ class LocationActivity : AppCompatActivity(), LocationListener {
         tvLon = findViewById(R.id.tvLon)
         tvAlt = findViewById(R.id.tvAlt)
         tvTime = findViewById(R.id.tvTime)
+        btnBack = findViewById(R.id.btnBackToMenu)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
