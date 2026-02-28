@@ -1,0 +1,3 @@
+[submodule "server/visual"]
+	path = server/visual
+	url = https://github.com/avdasich/visual
