@@ -35,6 +35,11 @@ class MainActivity : AppCompatActivity() {
             val i = Intent(this, SocketsZmqActivity::class.java)
             startActivity(i)
         }
+        val btnZmqLocation = findViewById<Button>(R.id.btnGoToZmqLocation)
+        btnZmqLocation.setOnClickListener {
+            val i = Intent(this, ZmqLocationActivity::class.java)
+            startActivity(i)
+        }
 
     }
 }
