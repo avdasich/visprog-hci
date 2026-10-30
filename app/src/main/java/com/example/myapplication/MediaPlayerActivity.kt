@@ -14,7 +14,7 @@ class MediaPlayerActivity : AppCompatActivity() {
     private var player: MediaPlayer? = null
     private var index = 0
 
-    private val songs = listOf(
+    private val songs = mutableListOf(
         R.raw.song_1, R.raw.song_2, R.raw.song_3, R.raw.song_4,
         R.raw.song_5, R.raw.song_6, R.raw.song_7, R.raw.song_8,
         R.raw.song_9, R.raw.song_10, R.raw.song_11, R.raw.song_12,
@@ -66,7 +66,6 @@ class MediaPlayerActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(sb: SeekBar?) {}
         })
 
-        val lvPlaylist: ListView = findViewById(R.id.lvPlaylist)
 
         val adapter = ArrayAdapter(
             this,
@@ -75,7 +74,7 @@ class MediaPlayerActivity : AppCompatActivity() {
             names
         )
 
-        lvPlaylist.adapter = adapter
+        list.adapter = adapter
 
         player = MediaPlayer.create(this, songs[index])
         tvName.text = names[index]
@@ -127,11 +126,23 @@ class MediaPlayerActivity : AppCompatActivity() {
             btnPlay.text = "⏸"
         }
 
-        btnSort.setOnClickListener {
-            names.sort()
-            adapter.notifyDataSetChanged()
-            tvName.text = names[index]
-        }
+        
+btnSort.setOnClickListener {
+    val currentSong = songs[index]
+    val sorted = names.zip(songs).sortedBy { it.first }
+
+    names.clear()
+    songs.clear()
+
+    sorted.forEach { (name, song) ->
+        names.add(name)
+        songs.add(song)
+    }
+
+    index = songs.indexOf(currentSong)
+    adapter.notifyDataSetChanged()
+}
+
 
         list.setOnItemClickListener { _, _, pos, _ ->
             player!!.stop()
