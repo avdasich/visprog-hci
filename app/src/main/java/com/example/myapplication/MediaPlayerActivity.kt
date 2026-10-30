@@ -14,22 +14,19 @@ class MediaPlayerActivity : AppCompatActivity() {
     private var player: MediaPlayer? = null
     private var index = 0
 
-    private val songs = mutableListOf(
-        R.raw.song_1, R.raw.song_2, R.raw.song_3, R.raw.song_4,
-        R.raw.song_5, R.raw.song_6, R.raw.song_7, R.raw.song_8,
-        R.raw.song_9, R.raw.song_10, R.raw.song_11, R.raw.song_12,
-        R.raw.song_13, R.raw.song_14, R.raw.song_15, R.raw.song_16,
-        R.raw.song_17
-    )
 
-    private val names = mutableListOf(
-        "1000 – ATL", "Не надо меня узнавать – Скриптонит", "Архитектор – ATL",
-        "Астронавт – ATL", "В унисон – ATL", "Вороний грай – ATL",
-        "Гори ясно – ATL", "Майк – ATL", "Обратно – ATL",
-        "Священный рэйв – ATL", "Коньяк – Скриптонит", "Космос – Скриптонит",
-        "Положение – Скриптонит", "Чистый – Скриптонит", "Любовь – Скриптонит",
-        "Танцуйте – ATL", "Шаман – ATL"
+    private val songs = mutableListOf(
+        R.raw.test_1,
+        R.raw.test_2,
+        R.raw.test_3
     )
+    
+    private val names = mutableListOf(
+        "Тестовый звук 440 Гц",
+        "Тестовый звук 554 Гц",
+        "Тестовый звук 659 Гц"
+    )
+    
 
     private val handler = Handler(Looper.getMainLooper())
 
